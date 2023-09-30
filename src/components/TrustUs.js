@@ -11,7 +11,7 @@ function TrustUs() {
   return (
     <section
       id="they-trust-us"
-      className="bg-gradient-to-t from-dark-orange to-orange py-14"
+      className="bg-gradient-to-t from-dark-orange to-orange py-14 px-8"
     >
       <div className="grid place-items-center container mx-auto gap-14">
         <SectionTitle
@@ -20,7 +20,7 @@ function TrustUs() {
           borderColor="#fff"
           borderGapColor="#F75603"
         />
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-28">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-x-28">
           {kpis.map(({ num, name }, i) => (
             <div key={i} className="grid grid-rows-2">
               <span

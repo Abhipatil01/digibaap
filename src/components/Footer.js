@@ -1,10 +1,15 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
 import WhatsApp from '../images/WhatsApp.svg';
+import WhatsAppHover from '../images/WhatsApp-hover.svg';
 import LinkedIn from '../images/LinkedIn.svg';
+import LinkedInHover from '../images/LinkedIn-hover.svg';
 import Insta from '../images/Insta.svg';
+import InstaHover from '../images/Insta-hover.svg';
 import Facebook from '../images/Facebook.svg';
+import FacebookHover from '../images/Facebook-hover.svg';
 import Youtube from '../images/Youtube.svg';
+import YoutubeHover from '../images/Youtube-hover.svg';
 import Notify from '../images/notify-heart-front-color.svg';
 import Phone from '../images/phone-ringing-front-color.svg';
 
@@ -28,10 +33,15 @@ function InputField({ label, placeholder, name, required, type = 'text' }) {
   );
 }
 
-function ProjectInMind() {
+function Footer() {
   const currentYear = new Date().getFullYear();
+  const [whatsappHover, setWhatsappHover] = React.useState(false);
+  const [instaHover, setinstaHover] = React.useState(false);
+  const [youtubeappHover, setyoutubeappHover] = React.useState(false);
+  const [linkedinHover, setlinkedinHover] = React.useState(false);
+  const [facebbokHover, setfacebbokHover] = React.useState(false);
   return (
-    <section
+    <footer
       id="project-in-mind"
       className="bg-gradient-to-t from-orange to-dark-orange px-8 pb-16 pt-32 relative"
     >
@@ -59,12 +69,24 @@ function ProjectInMind() {
               <span className="font-urbanist text-4xl font-medium text-white">
                 OR
               </span>
-              <div className="flex gap-4 items-center">
-                <img src={WhatsApp} alt="whatsapp" />
-                <span className="text-white font-phudu text-5xl">
+              <button
+                className="flex gap-4 items-center hover:text-yellow text-white"
+                onMouseEnter={() => {
+                  setWhatsappHover(true);
+                }}
+                onMouseLeave={() => {
+                  setWhatsappHover(false);
+                }}
+              >
+                <img
+                  src={whatsappHover ? WhatsAppHover : WhatsApp}
+                  alt="whatsapp"
+                  className="bg-inherit"
+                />
+                <span className="text-inherit font-phudu text-5xl">
                   CONNECT ON WHATSAPP
                 </span>
-              </div>
+              </button>
             </div>
           </div>
           <div className="xl:mt-12 grid">
@@ -96,18 +118,58 @@ function ProjectInMind() {
               <div className="grid gap-10">
                 <div className="grid gap-10">
                   <div className="flex gap-6">
-                    <div>
-                      <img src={LinkedIn} />
-                    </div>
-                    <div>
-                      <img src={Insta} />
-                    </div>
-                    <div>
-                      <img src={Facebook} />
-                    </div>
-                    <div>
-                      <img src={Youtube} />
-                    </div>
+                    <button
+                      onMouseEnter={() => {
+                        setlinkedinHover(true);
+                      }}
+                      onMouseLeave={() => {
+                        setlinkedinHover(false);
+                      }}
+                    >
+                      <img
+                        src={linkedinHover ? LinkedInHover : LinkedIn}
+                        alt="linkedin"
+                      />
+                    </button>
+                    <button
+                      onMouseEnter={() => {
+                        setinstaHover(true);
+                      }}
+                      onMouseLeave={() => {
+                        setinstaHover(false);
+                      }}
+                    >
+                      <img
+                        src={instaHover ? InstaHover : Insta}
+                        alt="instagram"
+                      />
+                    </button>
+                    <button
+                      onMouseEnter={() => {
+                        setfacebbokHover(true);
+                      }}
+                      onMouseLeave={() => {
+                        setfacebbokHover(false);
+                      }}
+                    >
+                      <img
+                        src={facebbokHover ? FacebookHover : Facebook}
+                        alt="facebook"
+                      />
+                    </button>
+                    <button
+                      onMouseEnter={() => {
+                        setyoutubeappHover(true);
+                      }}
+                      onMouseLeave={() => {
+                        setyoutubeappHover(false);
+                      }}
+                    >
+                      <img
+                        src={youtubeappHover ? YoutubeHover : Youtube}
+                        alt="youtube"
+                      />
+                    </button>
                   </div>
                 </div>
                 <div>
@@ -129,8 +191,8 @@ function ProjectInMind() {
           ©{currentYear} - Copyrights Reserved DigiBaapp
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 
-export default ProjectInMind;
+export default Footer;

@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Image(props) {
+function SquareImage(props) {
   return <img className="w-full aspect-square object-contain" {...props} />;
 }
 
-export default Image;
+export default SquareImage;

@@ -8,14 +8,13 @@ import Services from '../components/Services';
 import Industries from '../components/Industries';
 import Achievements from '../components/Achievements';
 import ClientFeedbacks from '../components/ClientFeedbacks';
-import ProjectInMind from '../components/ProjectInMind';
 import CallMeBack from '../components/CallMeBack';
+import FavIcon from '../images/DigiBaap_Logo.svg';
 
 const IndexPage = () => {
   return (
-    <main className="w-auto h-screen">
-      <CallMeBack />
-      <Header />
+    <>
+      {/* <CallMeBack /> */}
       <Home />
       <Work />
       <TrustUs />
@@ -24,11 +23,16 @@ const IndexPage = () => {
       <Industries />
       <Achievements />
       <ClientFeedbacks />
-      <ProjectInMind />
-    </main>
+    </>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>DigiBaapp</title>;
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>DigiBaapp</title>
+    <link id="icon" rel="icon" href={FavIcon} />
+  </>
+);

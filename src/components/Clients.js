@@ -12,10 +12,7 @@ import Client9 from '../images/client9.svg';
 import Client10 from '../images/client10.svg';
 import Client11 from '../images/client11.svg';
 import SectionTitle from './SectionTitle';
-
-function Img(props) {
-  return <img className="w-full aspect-square object-contain" {...props} />;
-}
+import SquareImage from './SquareImage';
 
 function Clients() {
   return (
@@ -29,19 +26,19 @@ function Clients() {
         />
         <div>
           <div className="grid gap-x-10 lg:grid-cols-6 md:grid-cols-3 place-content-baseline place-items-center grid-cols-2">
-            <Img src={Client1} />
-            <Img src={Client2} />
-            <Img src={Client3} />
-            <Img src={Client4} />
-            <Img src={Client5} />
-            <Img src={Client6} />
+            <SquareImage alt="client" src={Client1} />
+            <SquareImage alt="client" src={Client2} />
+            <SquareImage alt="client" src={Client3} />
+            <SquareImage alt="client" src={Client4} />
+            <SquareImage alt="client" src={Client5} />
+            <SquareImage alt="client" src={Client6} />
           </div>
           <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 place-content-baseline place-items-center grid-cols-2">
-            <Img src={Client7} />
-            <Img src={Client8} />
-            <Img src={Client9} />
-            <Img src={Client10} />
-            <Img src={Client11} />
+            <SquareImage alt="client" src={Client7} />
+            <SquareImage alt="client" src={Client8} />
+            <SquareImage alt="client" src={Client9} />
+            <SquareImage alt="client" src={Client10} />
+            <SquareImage alt="client" src={Client11} />
           </div>
         </div>
         <div>

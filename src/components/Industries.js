@@ -13,13 +13,13 @@ import Industry9 from '../images/industry9.svg';
 import Industry10 from '../images/industry10.svg';
 import Industry11 from '../images/industry11.svg';
 import Industry12 from '../images/industry12.svg';
-import Image from './Image';
+import SquareImage from './SquareImage';
 
 function Industry({ name, icon }) {
   return (
     <div className="grid grid-rows-2 gap-8 col-span-2 place-items-center flex-col p-8 bottom-2 border-light-brown border first:border-x-0 first:border-t-0 last:border-r-0 last:border-b-0">
       <div>
-        <Image src={icon} />
+        <SquareImage src={icon} alt={`industry-${name}`} />
       </div>
       <span className="font-urbanist text-2xl text-yellow font-extrabold text-center">
         {name}

@@ -66,8 +66,8 @@ function Achievements() {
             borderColor="#F75603"
             borderGapColor="#fff"
           />
-          <div className="absolute -top-[3.3rem] -left-10">
-            <img src={Crown} />
+          <div className="absolute md:-top-[3.3rem] md:-left-10 -top-[3.6rem] -left-[2.9rem]">
+            <img src={Crown} className="h-24 w-24 md:h-auto md:w-auto" />
           </div>
         </div>
         <div className="absolute xl:right-16 xl:top-48 hidden xl:block">
